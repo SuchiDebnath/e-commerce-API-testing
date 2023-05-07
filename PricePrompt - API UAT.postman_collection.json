@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "17c36a87-69ca-4802-84b0-ad4c69f2a2d8",
+		"name": "PricePrompt - API UAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Block Keyword",
+			"item": [
+				{
+					"name": "addBlockKeyword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/blockKeyword/add?apiKey=0a50d2c808b00e580b596ae54c418229&keyword=Barcelona",
+							"protocol": "http",
+							"host": [
+								"uat-priceprompt"
+							],
+							"port": "8080",
+							"path": [
+								"uk-priceprompt",
+								"api",
+								"v1",
+								"blockKeyword",
+								"add"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "0a50d2c808b00e580b596ae54c418229"
+								},
+								{
+									"key": "keyword",
+									"value": "Barcelona"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewBlockKeyword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/blockKeyword/view?apiKey=0a50d2c808b00e580b596ae54c418229",
+							"protocol": "http",
+							"host": [
+								"uat-priceprompt"
+							],
+							"port": "8080",
+							"path": [
+								"uk-priceprompt",
+								"api",
+								"v1",
+								"blockKeyword",
+								"view"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "0a50d2c808b00e580b596ae54c418229"
+								},
+								{
+									"key": "showDeactivated",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBlockKeyword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/blockKeyword/edit?apiKey=0a50d2c808b00e580b596ae54c418229&existingKeyword=samsung&updatedKeyword=updated samsung&isActive=false",
+							"protocol": "http",
+							"host": [
+								"uat-priceprompt"
+							],
+							"port": "8080",
+							"path": [
+								"uk-priceprompt",
+								"api",
+								"v1",
+								"blockKeyword",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "0a50d2c808b00e580b596ae54c418229"
+								},
+								{
+									"key": "existingKeyword",
+									"value": "samsung"
+								},
+								{
+									"key": "updatedKeyword",
+									"value": "updated samsung"
+								},
+								{
+									"key": "isActive",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blockedProductByKeyword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/blockedProductByKeyword/?apiKey=0a50d2c808b00e580b596ae54c418229&keyword=updated samsung",
+							"protocol": "http",
+							"host": [
+								"uat-priceprompt"
+							],
+							"port": "8080",
+							"path": [
+								"uk-priceprompt",
+								"api",
+								"v1",
+								"blockedProductByKeyword",
+								""
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "0a50d2c808b00e580b596ae54c418229"
+								},
+								{
+									"key": "keyword",
+									"value": "updated samsung"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail",
+			"item": [
+				{
+					"name": "testMail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://uat-priceprompt:8080/uk-priceprompt/testMail",
+							"protocol": "http",
+							"host": [
+								"uat-priceprompt"
+							],
+							"port": "8080",
+							"path": [
+								"uk-priceprompt",
+								"testMail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "newUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/newUser?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=anisur.rahman@gmail.com&pass=zunKuh-rytji2-p&firstName=Nafees&lastName=Shihab&phoneNumber=01698765432&gender=MALE&birthdate=19970101&ageRange=ADULT&addrLine1=Rmapura&addrLine2=Dhaka, Bangladesh&city=Dhaka&zipCode=1444&country=Bangldesh&emailAlert=true",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"newUser"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "anisur.rahman@gmail.com"
+						},
+						{
+							"key": "pass",
+							"value": "zunKuh-rytji2-p"
+						},
+						{
+							"key": "firstName",
+							"value": "Nafees"
+						},
+						{
+							"key": "lastName",
+							"value": "Shihab"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "01698765432"
+						},
+						{
+							"key": "gender",
+							"value": "MALE"
+						},
+						{
+							"key": "birthdate",
+							"value": "19970101"
+						},
+						{
+							"key": "ageRange",
+							"value": "ADULT"
+						},
+						{
+							"key": "addrLine1",
+							"value": "Rmapura"
+						},
+						{
+							"key": "addrLine2",
+							"value": "Dhaka, Bangladesh"
+						},
+						{
+							"key": "city",
+							"value": "Dhaka"
+						},
+						{
+							"key": "zipCode",
+							"value": "1444"
+						},
+						{
+							"key": "country",
+							"value": "Bangldesh"
+						},
+						{
+							"key": "emailAlert",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/user?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=maruf.ahmed@test.com&pass=@Aa12345&userId=100007",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "maruf.ahmed@test.com"
+						},
+						{
+							"key": "pass",
+							"value": "@Aa12345"
+						},
+						{
+							"key": "userId",
+							"value": "100007"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/updateUser?apiKey=0a50d2c808b00e580b596ae54c418229&userId=u_100008&currentPass=12345678&newPass=1aA2534456",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"updateUser"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "userId",
+							"value": "u_100008"
+						},
+						{
+							"key": "currentPass",
+							"value": "12345678"
+						},
+						{
+							"key": "firstName",
+							"value": "Ridoy",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Kumar Joy",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "016000000",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "MALE",
+							"disabled": true
+						},
+						{
+							"key": "birthdate",
+							"value": "19970101",
+							"disabled": true
+						},
+						{
+							"key": "ageRange",
+							"value": "ADULT",
+							"disabled": true
+						},
+						{
+							"key": "addrLine1",
+							"value": "Ashulia, Savar",
+							"disabled": true
+						},
+						{
+							"key": "addrLine2",
+							"value": "Dhaka, Bangladesh",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "Dhaka",
+							"disabled": true
+						},
+						{
+							"key": "zipCode",
+							"value": "asdfasdf",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "Bangldesh",
+							"disabled": true
+						},
+						{
+							"key": "emailAlert",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "emailId",
+							"value": "ridoykj10@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "newPass",
+							"value": "1aA2534456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newTrack",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/newTrack?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=naztechc@gmail.com&targetPrice=5&productUrl=https://www.debenhams.com/product/blue-zoo-younger-girls-gingham-tiered-dress_zdd07385?colour=blue",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"newTrack"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "naztechc@gmail.com"
+						},
+						{
+							"key": "targetPrice",
+							"value": "5"
+						},
+						{
+							"key": "firstName",
+							"value": "Ridoy",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Kumar",
+							"disabled": true
+						},
+						{
+							"key": "productUrl",
+							"value": "https://www.debenhams.com/product/blue-zoo-younger-girls-gingham-tiered-dress_zdd07385?colour=blue"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trackHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/trackHistory?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=maruf.ahmed@test.com",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"trackHistory"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "maruf.ahmed@test.com"
+						},
+						{
+							"key": "userId",
+							"value": "100004",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "toDate",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alerts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/alerts?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=nafiuzzaman.parves@naztech.us.com",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"alerts"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "nafiuzzaman.parves@naztech.us.com"
+						},
+						{
+							"key": "userId",
+							"value": "1245",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrack",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/updateTrack?apiKey=0a50d2c808b00e580b596ae54c418229&emailId=ridoykj@gmail.com&alertId=100008&activeTrack=true&targetPrice=120&activeMail=false",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"updateTrack"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "emailId",
+							"value": "ridoykj@gmail.com"
+						},
+						{
+							"key": "userId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "alertId",
+							"value": "100008"
+						},
+						{
+							"key": "activeTrack",
+							"value": "true"
+						},
+						{
+							"key": "targetPrice",
+							"value": "120"
+						},
+						{
+							"key": "activeMail",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currency",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/currency?apiKey=0a50d2c808b00e580b596ae54c418229",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"currency"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recentSearch",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/recentSearch?apiKey=0a50d2c808b00e580b596ae54c418229&itemCount=100&userId=100013&activeKeyword=true",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"recentSearch"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "itemCount",
+							"value": "100"
+						},
+						{
+							"key": "userId",
+							"value": "100013"
+						},
+						{
+							"key": "activeKeyword",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resetPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/resetPassword?apiKey=0a50d2c808b00e580b596ae54c418229&email=hello.mhanik@gmail.comm&oldPassword=gCLg4x1s1YT¢U4iH&newPassword=@Aa1234564&newPasswordAgain=@Aa123456",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"resetPassword"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "email",
+							"value": "hello.mhanik@gmail.comm"
+						},
+						{
+							"key": "oldPassword",
+							"value": "gCLg4x1s1YT¢U4iH"
+						},
+						{
+							"key": "newPassword",
+							"value": "@Aa1234564"
+						},
+						{
+							"key": "newPasswordAgain",
+							"value": "@Aa123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://uat-priceprompt:8080/uk-priceprompt/api/v1/forgotPassword?apiKey=0a50d2c808b00e580b596ae54c418229&email=hello.mhanik@gmail.com",
+					"protocol": "http",
+					"host": [
+						"uat-priceprompt"
+					],
+					"port": "8080",
+					"path": [
+						"uk-priceprompt",
+						"api",
+						"v1",
+						"forgotPassword"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "0a50d2c808b00e580b596ae54c418229"
+						},
+						{
+							"key": "email",
+							"value": "hello.mhanik@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
